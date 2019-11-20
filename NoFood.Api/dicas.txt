@@ -1,0 +1,5 @@
+npm intsall express --save
+node server
+npm install -g nodemon
+nodemon server
+npm install body-parser --save

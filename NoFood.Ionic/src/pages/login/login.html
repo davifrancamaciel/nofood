@@ -1,0 +1,37 @@
+<ion-content padding class="backImage">
+    <div class="logo">
+        <img src="assets/imagens/icon-branco.png">
+        <span color="light">NoFood</span>
+    </div>
+    <ion-list no-lines class="list-transparent">
+
+        <ion-item>
+            <ion-input [(ngModel)]="form.email" type="text" placeholder="E-mail" autocomplete="off"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input [(ngModel)]="form.senha" type="password" placeholder="Senha" autocomplete="off"></ion-input>
+        </ion-item>
+
+    </ion-list>
+    <ion-grid>
+        <ion-row>
+            <button ion-button block round (click)="login()" color="secondary">
+      Efetuar login
+    </button>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <button ion-button block round (click)="cadastro()" color="secondary" outline>
+          Cadastrar-se
+        </button>
+        </ion-row>
+    </ion-grid>
+    <ion-grid>
+        <ion-row>
+            <button ion-button clear (click)="abrirCategoria()" block color="light">
+              Administrar cadastros
+            </button>
+        </ion-row>
+    </ion-grid>
+</ion-content>

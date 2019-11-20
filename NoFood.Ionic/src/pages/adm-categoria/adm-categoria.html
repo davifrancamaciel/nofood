@@ -1,0 +1,36 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Categoria</ion-title>
+    </ion-navbar>
+    <ion-buttons right>
+        <button ion-button clear>
+            Salvar
+        </button>
+        <button ion-button icon-only>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+    </ion-buttons>
+</ion-header>
+
+
+<ion-content no-padding>
+    <ion-list no-lines>
+        <ion-item>
+            <ion-label floating>Titulo</ion-label>
+            <ion-input [(ngModel)]="categoria.titulo" type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Descrição</ion-label>
+            <ion-textarea [(ngModel)]="categoria.descricao" rows="4" placeholder="Adcione a descrição da sua categoria"></ion-textarea>
+        </ion-item>
+        <ion-item text-center>
+            <button ion-button clear (click)="getPictureOption()">
+              <ion-icon name="camera" item-left></ion-icon>
+              Selecionar foto</button>
+        </ion-item>
+        <ion-item *ngIf="categoria.foto">
+            <img [src]="categoria.foto">
+        </ion-item>
+    </ion-list>
+</ion-content>
